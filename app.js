@@ -40,7 +40,10 @@ let matriculaRoutes = require('./src/modules/matriculas/routes/index')
 app.use('/matriculas', matriculaRoutes)
 
 let loginRoutes = require('./src/modules/login/routes/index')
-app.use('/Login', loginRoutes)
+app.use('/login', loginRoutes)
+
+let funcionarioRoutes = require('./src/modules/Funcionario/Routes/index')
+app.use('/funcionario', funcionarioRoutes)
 
 
 app.listen(3000)
