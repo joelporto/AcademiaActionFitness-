@@ -1,5 +1,6 @@
 const sequelize = require("sequelize")
 const service = require("../service/index")
+const bcrypt = require('bcrypt')
 
 const validarLoginNoBD = async (req, res) => {
   var error = []
@@ -10,9 +11,9 @@ const validarLoginNoBD = async (req, res) => {
     })
   }
 
-  if (!req.body.senha || typeof req.body.senha == undefined || req.body.senha == null) {
+  if (!req.body.password || typeof req.body.password == undefined || req.body.password == null) {
     error.push({
-      texto: "Senha não existe"
+      texto: "Senha invalida"
     })
   }
 
@@ -39,10 +40,10 @@ const validarLoginNoBD = async (req, res) => {
     })
   }
 
-}
+  
 
+}
 
 module.exports = {
   validarLoginNoBD,
-
 }

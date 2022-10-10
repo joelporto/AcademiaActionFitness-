@@ -14,7 +14,6 @@ const funcionarios = sequelizeAcademia.define('funcionarios', {
     Senha: {
         type: Sequelize.INTEGER,
         allowNull: true,
-       
     }
 })
 

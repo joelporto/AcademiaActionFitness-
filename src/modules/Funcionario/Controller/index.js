@@ -5,9 +5,8 @@ const bcrypt = require("bcrypt")
 
 const createFuncionario = async(req,res) =>{
     var error = []
-
-
-    if(!req.body.Nickname || typeof req.body.Nickname == undefined || req.body.Nickname == null){
+    
+    if(!req.body.usuario || typeof req.body.usuario == undefined || req.body.usuario == null){
         error.push({texto: "NickName invalido"})
     }
 
@@ -35,19 +34,18 @@ const createFuncionario = async(req,res) =>{
         res.status(400).send({mensagen: "Erro: Nickname ja existe"});
         return
     }else{
-        res.status(200).send({mensagen: "Usuario cadastrado com Suceso"})
+        res.status(200).send({mensagen: "usuario cadastrado com sucesso" })
     }
 
- 
     
-
-    let _usuario = {
+    const myPlaintextPassword = req.body.senha
+    const hash = bcrypt.hashSync(myPlaintextPassword, 5);
+   
+    const _usuario = {
         Nome_Funcionario: req.body.nome,
-        Nickname: req.body.Nickname,
-        Senha: req.body.senha
-
+        Nickname: req.body.usuario,
+        Senha: hash
     }
-
     
     await service.criaUsuarioNoBD(_usuario) 
 
