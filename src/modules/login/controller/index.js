@@ -11,7 +11,7 @@ const validarLoginNoBD = async (req, res) => {
     })
   }
 
-  if (!req.body.password || typeof req.body.password == undefined || req.body.password == null) {
+  if (!req.body.senha || typeof req.body.senha == undefined || req.body.senha == null) {
     error.push({
       texto: "Senha invalida"
     })
@@ -40,7 +40,7 @@ const validarLoginNoBD = async (req, res) => {
     })
   }
 
-  
+
 
 }
 

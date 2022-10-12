@@ -38,8 +38,8 @@ const createFuncionario = async(req,res) =>{
     }
 
     
-    const myPlaintextPassword = req.body.senha
-    const hash = bcrypt.hashSync(myPlaintextPassword, 5);
+    /* const myPlaintextPassword = req.body.senha
+    const hash = bcrypt.hashSync(myPlaintextPassword, 5); */
    
     const _usuario = {
         Nome_Funcionario: req.body.nome,
