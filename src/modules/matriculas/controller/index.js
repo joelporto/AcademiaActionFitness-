@@ -57,7 +57,9 @@ if(validarMatricula){
         Endereco: req.body.endereco,
         Numero: req.body.numero,
         Bairro: req.body.bairro,
-        /* Email: req.body.id, */
+        Email: req.body.email,
+        plano: req.body.plan,
+        vigencia: req.body.vigencia, 
 
     }
 

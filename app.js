@@ -47,7 +47,8 @@ const init = () => {
     let loginRoutes = require('./src/modules/login/routes/index')
     app.use('/login', loginRoutes)
 
-
+    let buscarRoutes = require('./src/modules/pesquisarMatricula/routes/index')
+    app.use('/buscarMatricula' , buscarRoutes)
 
     app.listen(3000)
 

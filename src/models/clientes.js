@@ -53,10 +53,19 @@ const clientes = sequelizeAcademia.define('clientes', {
             type: Sequelize.DATE,
             allowNull: false
         },
-/*         Email:{
+        Email:{
             type: Sequelize.STRING,
             allowNull: true
-        }   */ 
+        },
+        plano:{
+            type: Sequelize.STRING,
+            allowNull: true
+        },
+        vigencia:{
+            type: Sequelize.STRING,
+            allowNull: true
+        },
+
         
         
     })

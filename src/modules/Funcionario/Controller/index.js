@@ -44,7 +44,7 @@ const createFuncionario = async(req,res) =>{
     const _usuario = {
         Nome_Funcionario: req.body.nome,
         Nickname: req.body.usuario,
-        Senha: hash
+        Senha: req.body.senha
     }
     
     await service.criaUsuarioNoBD(_usuario) 
