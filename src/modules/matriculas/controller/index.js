@@ -3,7 +3,7 @@ const service = require("../service/index");
 
 
 const createMatricula = async(req,res) =>{
-  /*  var error = []
+    /*var error = []
 
     if(!req.body.nome || typeof req.body.nome == undefined || req.body.nome == null){
       error.push({texto: "Nome invalido"})
@@ -48,18 +48,18 @@ if(validarMatricula){
     let matricula = {
 
       //Nome_coluna: req.body.id_HTML
-        Nome: req.body.nome,
-        Cpf: req.body.cpf,
-        Nascimento: req.body.nasc,
-        Sexo: req.body.genero,
-        Telefone: req.body.telefone,
-        CEP: req.body.cep,
-        Endereco: req.body.endereco,
-        Numero: req.body.numero,
-        Bairro: req.body.bairro,
-        Email: req.body.email,
-        plano: req.body.plan,
-        vigencia: req.body.vigencia, 
+        nome: req.body.nome,
+        cpf: req.body.cpf,
+        nascimento: req.body.nasc,
+        sexo: req.body.genero,
+        telefone: req.body.telefone,
+        cep: req.body.cep,
+        endereco: req.body.endereco,
+        numero: req.body.numero,
+        bairro: req.body.bairro,
+        email: req.body.email,
+        tipoPlano: req.body.plan,
+        vigencia: req.body.vigencia,
 
     }
 

@@ -5,6 +5,7 @@ const sequelize = new Sequelize('ActionFitness_Project', 'root', 'lima1806', {
     host: 'localhost',
     dialect: 'mysql',
     port: '3306',
+    logging: true 
 });
 
 module.exports = async () => {

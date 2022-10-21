@@ -3,11 +3,9 @@ const matriculasModel = require("../../../models/clientes")
 
 
 /*const validarMatricula = async(req,res) =>{
-    let result = await matriculasModel.findAll({
+    let result = await matriculasModel.findOne({
         where:{
-
-            Cpf: req.body.cpf,
-
+            cpf: req.body.cpf,
         }
             }).catch((err)=>{
                 console.log(err)

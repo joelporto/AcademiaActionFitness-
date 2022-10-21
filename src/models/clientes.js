@@ -2,62 +2,64 @@ const Sequelize = require('sequelize')
 
 //const "Nome-Tabela" = Conexão-Global.define('Nome-Tabela',{
 const clientes = sequelizeAcademia.define('clientes', {
-        
+
         /*Nome_coluna:{
             type: Sequelize.Datatybe,
             allwNull: notnull = true / null = false,
-            
+
         },*/
-        Nome:{
+        nome:{
             type: Sequelize.STRING,
             allowNull: true,
             primaryKey: true
         },
-        Cpf:{
+        cpf:{
             type: Sequelize.STRING,
-            allowNull: true
+            allowNull: true,
+            primaryKey: true
         },
-        Nascimento:{
+        nascimento:{
             type: Sequelize.DATEONLY,
             allowNull: true
         },
-        Sexo:{
+        sexo:{
             type: Sequelize.STRING,
             allowNull: true
         },
-        Telefone: {
+        telefone: {
             type: Sequelize.STRING,
             allowNull: true
         },
-        CEP: {
+        cep: {
             type: Sequelize.INTEGER,
             allowNull: true
         },
-        Endereco: {
+        endereco: {
             type: Sequelize.STRING,
             allowNull: true
         },
-        Numero: {
+        numero: {
             type: Sequelize.INTEGER,
             allowNull: true
         },
-        Bairro: {
+        bairro: {
             type: Sequelize.STRING,
             allowNull: true
         },
         updatedAt: {
             type: Sequelize.DATE,
-            allowNull: false
+            allowNull: false,
+
         },
         createdAt: {
-            type: Sequelize.DATE,
+            type: Sequelize.DATEONLY,
             allowNull: false
         },
-        Email:{
+        email:{
             type: Sequelize.STRING,
             allowNull: true
         },
-        plano:{
+        tipoPlano:{
             type: Sequelize.STRING,
             allowNull: true
         },
@@ -66,11 +68,8 @@ const clientes = sequelizeAcademia.define('clientes', {
             allowNull: true
         },
 
-        
-        
-    })
-    
-    module.exports = clientes
-    
 
-            
+
+    })
+
+    module.exports = clientes

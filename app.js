@@ -37,7 +37,7 @@ const init = () => {
       next();
     });
 
-
+    // Rotas
     let matriculaRoutes = require('./src/modules/matriculas/routes/index')
     app.use('/clientes', matriculaRoutes)
 
@@ -50,6 +50,10 @@ const init = () => {
     let buscarRoutes = require('./src/modules/pesquisarMatricula/routes/index')
     app.use('/buscarMatricula' , buscarRoutes)
 
+    let alterarRoutes = require('./src/modules/alterarMatricula/routes/index')
+    app.use('/alterarMatricula' , alterarRoutes)
+
+    // Porta
     app.listen(3000)
 
   }).catch(err => {

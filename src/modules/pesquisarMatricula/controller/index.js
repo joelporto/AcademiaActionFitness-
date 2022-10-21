@@ -8,25 +8,29 @@ const createAluno = async(req, res) =>{
         error.push({texto: "CPF não invalido "})
     }
 
-    let validarCPF= await service.validarCPFnoBD(req)
+    if(error.length > 0){
+      res.status(400).send({mensagen: error});
+      return req
+  }
 
+    let validarCPF= await service.validarCPFnoBD(req)
     if (validarCPF) {
         return res.json({
           userValid: true,
-          nome: validarCPF['Nome'],
-          email: validarCPF['Email'],
-          enderoco: validarCPF['Endereco'],  
+          nome: validarCPF['nome'],
+          endereco: validarCPF['endereco'],
           createdAt: validarCPF['createdAt'],
           updatedAt: validarCPF['updatedAt'],
-          plano: validarCPF['plano'],
+          tipoPlano: validarCPF['tipoPlano'],
           vigencia: validarCPF['vigencia'],
-          nacimento: validarCPF['Nascimento'],
-          telefone: validarCPF['Telefone'],
-          genero: validarCPF['Sexo'],
-          cep: validarCPF['CEP'],
-          numero: validarCPF['Numero'],
-          bairro: validarCPF['Bairro'],
-          email: validarCPF['Email'],
+          nacimento: validarCPF['nascimento'],
+          telefone: validarCPF['telefone'],
+          genero: validarCPF['sexo'],
+          cep: validarCPF['cep'],
+          numero: validarCPF['numero'],
+          bairro: validarCPF['bairro'],
+          email: validarCPF['email'],
+          cpf: validarCPF['cpf'],
         })
       }else{
         return res.json({
@@ -34,6 +38,8 @@ const createAluno = async(req, res) =>{
         })
       }
 }
+
+
 
 module.exports = {
     createAluno
