@@ -67,6 +67,10 @@ const clientes = sequelizeAcademia.define('clientes', {
             type: Sequelize.STRING,
             allowNull: true
         },
+        vencimento:{
+            type: Sequelize.STRING,
+            allowNull: true
+        }
 
 
 

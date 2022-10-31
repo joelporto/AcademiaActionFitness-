@@ -8,7 +8,7 @@ const alterarMatricula = async(req, res) =>{
       error.push({texto: "Nome invalido"})
     }
 
-    if(!req.body.endereco || typeof req.body.endereco == undefined || req.body.endereco ==null){
+    if(!req.body.rua || typeof req.body.rua == undefined || req.body.rua ==null){
       error.push({texto: "Endereço invalido"})
     }
 
@@ -20,7 +20,7 @@ const alterarMatricula = async(req, res) =>{
       error.push({texto: "Vigencia invalido"})
     }
 
-    if(!req.body.nasc || typeof req.body.nasc == undefined || req.body.nasc ==null){
+    if(!req.body.nascimento || typeof req.body.nascimento == undefined || req.body.nascimento ==null){
       error.push({texto: "Nacimento invalido"})
     }
 
@@ -60,16 +60,17 @@ const alterarMatricula = async(req, res) =>{
     let _alterar ={
 
       nome: req.body.nome,
-      nascimento: req.body.nasc,
+      nascimento: req.body.nascimento,
       sexo: req.body.genero,
       telefone: req.body.telefone,
       cep: req.body.cep,
-      endereco: req.body.endereco,
+      endereco: req.body.rua,
       numero: req.body.numero,
       bairro: req.body.bairro,
       email: req.body.email,
       tipoPlano: req.body.plan,
       vigencia: req.body.vigencia,
+      vencimento: req.body.vencimento,
 
     }
 

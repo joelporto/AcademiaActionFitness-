@@ -60,6 +60,7 @@ if(validarMatricula){
         email: req.body.email,
         tipoPlano: req.body.plan,
         vigencia: req.body.vigencia,
+        vencimento:req.body.data
 
     }
 

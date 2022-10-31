@@ -31,6 +31,7 @@ const createAluno = async(req, res) =>{
           bairro: validarCPF['bairro'],
           email: validarCPF['email'],
           cpf: validarCPF['cpf'],
+          vencimento: validarCPF['vencimento']
         })
       }else{
         return res.json({

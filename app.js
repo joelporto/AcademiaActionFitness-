@@ -51,7 +51,7 @@ const init = () => {
     app.use('/buscarMatricula' , buscarRoutes)
 
     let alterarRoutes = require('./src/modules/alterarMatricula/routes/index')
-    app.use('/alterarMatricula' , alterarRoutes)
+    app.use('/updateMatricula' , alterarRoutes)
 
     // Porta
     app.listen(3000)

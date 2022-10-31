@@ -16,6 +16,7 @@ const alterarDados = async (_alterar, _key ,res) => {
   let result = await clientesModel.update( _alterar, {
     where: {
       cpf: _key
+      
     },
     logging: true
   }).catch((err) => {
