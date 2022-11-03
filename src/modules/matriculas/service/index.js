@@ -1,9 +1,8 @@
 const sequelize  = require("sequelize");
-const matriculasModel = require("../../../models/clientes")
+const clienteModel = require("../../../models/clientes")
 
-
-/*const validarMatricula = async(req,res) =>{
-    let result = await matriculasModel.findOne({
+const validarMatricula = async(req,res) =>{
+    let result = await clienteModel.findOne({
         where:{
             cpf: req.body.cpf,
         }
@@ -13,25 +12,14 @@ const matriculasModel = require("../../../models/clientes")
     return result
 }
 
-const criarMatriculaNoBD = async(_matricula) =>{
+const criarclienteNoBD = async(_cliente) =>{
 
-    await matriculasModel.create(_matricula).catch((err)=>{
+    await clienteModel.create(_cliente).catch((err)=>{
         console.log(err)
        })
 }
 
-
-
-
 module.exports = {
     validarMatricula,
-    criarMatriculaNoBD
-};*/
-
-const criarMatriculaNoBD = async(_matricula) =>{
-  await matriculasModel.create(_matricula)
-}
-
-module.exports = {
-  criarMatriculaNoBD
-}
+    criarclienteNoBD
+};

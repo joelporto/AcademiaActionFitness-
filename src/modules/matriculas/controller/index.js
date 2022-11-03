@@ -3,7 +3,7 @@ const service = require("../service/index");
 
 
 const createMatricula = async(req,res) =>{
-    /*var error = []
+    var error = []
 
     if(!req.body.nome || typeof req.body.nome == undefined || req.body.nome == null){
       error.push({texto: "Nome invalido"})
@@ -30,6 +30,26 @@ const createMatricula = async(req,res) =>{
       error.push({texto: "Nome invalido"})
     }
 
+    if(!req.body.genero || typeof req.body.genero == undefined || req.body.genero == null){
+      error.push({texto: "Gernero invalido"})
+    }
+
+    if(!req.body.email || typeof req.body.email == undefined || req.body.email == null){
+      error.push({texto: "Email invalido"})
+    }
+
+    if(!req.body.plan || typeof req.body.plan == undefined || req.body.plan == null){
+      error.push({texto: "Plano invalido"})
+    }
+
+    if(!req.body.vigencia || typeof req.body.vigencia == undefined || req.body.vigencia == null){
+      error.push({texto: "vigencia invalido"})
+    }
+
+    if(!req.body.data|| typeof req.body.data == undefined || req.body.data == null){
+      error.push({texto: "vencimento invalido"})
+    }
+
   if(error.length > 0){
     res.status(400).send({mensagen: error});
     return req
@@ -38,25 +58,25 @@ const createMatricula = async(req,res) =>{
 let validarMatricula =  await service.validarMatricula(req)
 
 if(validarMatricula){
-    res.status(200).send({mensagen: "Matricula cadastrado com Suceso"})
-}else{
     res.status(400).send({mensagen: "Erro: matricula já existe"});
-    return req
-}*/
+    return
+}else{
+    res.status(200).send({mensagen: "Matricula cadastrado com Suceso"})
+}
 
 
-    let matricula = {
+    let cliente = {
 
-      //Nome_coluna: req.body.id_HTML
+      //Nome_colunaBD: req.body.id_HTML
         nome: req.body.nome,
         cpf: req.body.cpf,
         nascimento: req.body.nasc,
-        sexo: req.body.genero,
         telefone: req.body.telefone,
         cep: req.body.cep,
         endereco: req.body.endereco,
         numero: req.body.numero,
         bairro: req.body.bairro,
+        sexo: req.body.genero,
         email: req.body.email,
         tipoPlano: req.body.plan,
         vigencia: req.body.vigencia,
@@ -64,8 +84,7 @@ if(validarMatricula){
 
     }
 
-
-     await service.criarMatriculaNoBD(matricula)
+      await service.criarclienteNoBD(cliente)
 
 }
 

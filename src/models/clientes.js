@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize')
 
-//const "Nome-Tabela" = Conexão-Global.define('Nome-Tabela',{
+//const "Nome-Tabela" = conexãoGlobal.define('Nome-Tabela',{
 const clientes = sequelizeAcademia.define('clientes', {
 
         /*Nome_coluna:{
@@ -46,15 +46,15 @@ const clientes = sequelizeAcademia.define('clientes', {
             type: Sequelize.STRING,
             allowNull: true
         },
-        updatedAt: {
+         updatedAt: {
             type: Sequelize.DATE,
             allowNull: false,
 
         },
         createdAt: {
-            type: Sequelize.DATEONLY,
+            type: Sequelize.DATE,
             allowNull: false
-        },
+        }, 
         email:{
             type: Sequelize.STRING,
             allowNull: true

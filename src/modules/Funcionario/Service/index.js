@@ -17,7 +17,7 @@ const validaUsuarioNoBD = async(req,res) =>{
 const criaUsuarioNoBD = async(_usuario) =>{
       
     await funcionarioModel.create(_usuario).catch((err)=>{
-       
+       console.log(err)
        })
 
 }

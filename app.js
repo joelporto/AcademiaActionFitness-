@@ -21,18 +21,13 @@ const init = () => {
 
       // Site que você deseja permitir a conexão
       res.setHeader('Access-Control-Allow-Origin', '*');
-
-
       // Solicitar métodos que você deseja permitir
       res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-
       // Solicitar cabeçalhos que você deseja permitir
       res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-
       // Defina como verdadeiro se você precisar que o site inclua cookies nas solicitações enviadas
       // para a API (por exemplo, caso você use sessões)
       res.setHeader('Access-Control-Allow-Credentials', true);
-
       // Passe para a próxima camada de middleware
       next();
     });
@@ -52,6 +47,9 @@ const init = () => {
 
     let alterarRoutes = require('./src/modules/alterarMatricula/routes/index')
     app.use('/updateMatricula' , alterarRoutes)
+
+    let fornecedor = require('./src/modules/cadastraFornecedor/Routes/index')
+    app.use('/fornecedor' , fornecedor)
 
     // Porta
     app.listen(3000)

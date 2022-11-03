@@ -70,7 +70,7 @@ const alterarMatricula = async(req, res) =>{
       email: req.body.email,
       tipoPlano: req.body.plan,
       vigencia: req.body.vigencia,
-      vencimento: req.body.vencimento,
+      vencimento: req.body.data,
 
     }
 
