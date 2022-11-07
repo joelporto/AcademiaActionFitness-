@@ -64,7 +64,6 @@ if(validarMatricula){
     res.status(200).send({mensagen: "Matricula cadastrado com Suceso"})
 }
 
-
     let cliente = {
 
       //Nome_colunaBD: req.body.id_HTML
@@ -83,13 +82,30 @@ if(validarMatricula){
         vencimento:req.body.data
 
     }
+  
+    let v1 = req.body.data
+    let data = new Date();
+    let dataFormatada = ((v1 )) + "/" + ((data.getMonth() + 1)) + "/" + ((data.getFullYear() + 0));
+    
+    let pago = ((data.getDate())) + "/" + ((data.getMonth() + 1)) + "/" + ((data.getFullYear() + 0)); 
 
-      await service.criarclienteNoBD(cliente)
+    let contas = {
+      
+      nome: req.body.nome,
+      cpf: req.body.cpf,
+      nomePlano: req.body.plan,
+      dataVencimento: dataFormatada,
+      statusPago: 'Pago' ,
+      dataPagamento: pago
+      
+    }
+
+    await service.criarContasnoBD(contas)
+    await service.criarclienteNoBD(cliente)
 
 }
 
 
 module.exports = {
     createMatricula
-
 };

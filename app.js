@@ -32,24 +32,33 @@ const init = () => {
       next();
     });
 
-    // Rotas
+    //Rota para cadastrar matricula
     let matriculaRoutes = require('./src/modules/matriculas/routes/index')
     app.use('/clientes', matriculaRoutes)
 
+    // Rota para cadastrar funcionario
     let funcionarioRoutes = require('./src/modules/Funcionario/Routes/index')
     app.use('/funcionario', funcionarioRoutes)
 
+    //Rota para validar login 
     let loginRoutes = require('./src/modules/login/routes/index')
     app.use('/login', loginRoutes)
 
+    //Rota para buscar matricula
     let buscarRoutes = require('./src/modules/pesquisarMatricula/routes/index')
     app.use('/buscarMatricula' , buscarRoutes)
 
+    //Rota para alterar matricula
     let alterarRoutes = require('./src/modules/alterarMatricula/routes/index')
     app.use('/updateMatricula' , alterarRoutes)
 
+    // Rota para cadastar fornecedor
     let fornecedor = require('./src/modules/cadastraFornecedor/Routes/index')
     app.use('/fornecedor' , fornecedor)
+
+    //Rota so para TESTES 
+    let testeRoutes = require('./src/modules/testes/routes/index')
+    app.use('/soParaTeste' , testeRoutes)
 
     // Porta
     app.listen(3000)

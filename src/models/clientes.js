@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize')
+const conta = require('./contasReceber')
 
 //const "Nome-Tabela" = conexãoGlobal.define('Nome-Tabela',{
 const clientes = sequelizeAcademia.define('clientes', {
@@ -11,7 +12,6 @@ const clientes = sequelizeAcademia.define('clientes', {
         nome:{
             type: Sequelize.STRING,
             allowNull: true,
-            primaryKey: true
         },
         cpf:{
             type: Sequelize.STRING,
@@ -71,9 +71,7 @@ const clientes = sequelizeAcademia.define('clientes', {
             type: Sequelize.STRING,
             allowNull: true
         }
-
-
-
     })
 
+   
     module.exports = clientes
