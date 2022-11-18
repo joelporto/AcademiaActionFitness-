@@ -18,7 +18,6 @@ const init = () => {
     app.use(bodyParse.json());
 
     app.use(function(req, res, next) {
-
       // Site que você deseja permitir a conexão
       res.setHeader('Access-Control-Allow-Origin', '*');
       // Solicitar métodos que você deseja permitir
@@ -52,9 +51,29 @@ const init = () => {
     let alterarRoutes = require('./src/modules/alterarMatricula/routes/index')
     app.use('/updateMatricula' , alterarRoutes)
 
-    // Rota para cadastar fornecedor
-    let fornecedor = require('./src/modules/cadastraFornecedor/Routes/index')
-    app.use('/fornecedor' , fornecedor)
+    //Rota para cadastar fornecedor
+    let fornecedorRoutes = require('./src/modules/cadastraFornecedor/Routes/index')
+    app.use('/fornecedor' , fornecedorRoutes)
+
+    //Rota para buscar Contas a Receber
+    let buscarContaRoutes = require('./src/modules/buscarConta/routes/index')
+    app.use('/buscarConta' , buscarContaRoutes)
+
+    //Rota para alterar dados dos planos
+    let alterarPlanoRoutes = require('./src/modules/alterarPlanos/routes/index')
+    app.use('/alterarPlano' , alterarPlanoRoutes)
+
+    //Rota para ver planos
+    let planoRoutes = require('./src/modules/planos/routes/index')
+    app.use('/plano' , planoRoutes)
+
+    //Rota para cadastrar novos pagamentos
+    let novoPagamento = require('./src/modules/contasReceber/routes/index')
+    app.use('/novoPagamento' , novoPagamento)
+
+    //Rota para cadastrar novo indicado
+    let novoIndicado = require('./src/modules/cadastraIndicado/routes/index')
+    app.use('/indicado' , novoIndicado)
 
     //Rota so para TESTES 
     let testeRoutes = require('./src/modules/testes/routes/index')

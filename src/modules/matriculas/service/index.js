@@ -14,15 +14,16 @@ const validarMatricula = async(req,res) =>{
     return result
 }
 
-const criarclienteNoBD = async(_cliente,res) =>{
+const criarclienteNoBD = async(_cliente) =>{
 
     await clienteModel.create(_cliente)
-    
+
 }
 
 const criarContasnoBD = async(_conta) =>{
     
     await contaModel.create(_conta)
+
 }
 
 module.exports = {

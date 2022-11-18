@@ -1,6 +1,6 @@
 
 const sequelize = require("sequelize")
-const loginModel = require("../../../models/login")
+const loginModel = require("../../../models/funcionario")
 const bcrypt = require('bcrypt');
 
 

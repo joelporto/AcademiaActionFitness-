@@ -73,5 +73,7 @@ const clientes = sequelizeAcademia.define('clientes', {
         }
     })
 
+
+
    
     module.exports = clientes

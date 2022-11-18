@@ -3,12 +3,16 @@ const  Sequelize  = require("sequelize");
 
 const teste = async(req,res) =>{
     
-    let v1 = req.body.data
-    let data = new Date();
-    let dataFormatada = ((v1 )) + "/" + ((data.getMonth() + 1)) + "/" + ((data.getFullYear() + 0)); 
-    console.log(dataFormatada);
 
-    res.status(200).send({mensagen: dataFormatada})
+    let data = req.body.data
+    let meses = [1,2,3,4,5,6,7,8,9,10,11,12]
+    for (let i in meses++)  {
+        console.log(i)
+    }
+   
+  
+    /* res.status(200).send({mensagen: }) */
+    
 }
 
 module.exports ={
