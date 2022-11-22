@@ -1,27 +1,6 @@
-const { async } = require('q')
 const service = require('../service/index')
 
-
-const plano = async(req,res)=>{
-
-    let plan = await service.exibirPlanos(req)
-    
-    let dados = []
-
-    dados.push({
-        planos: plan
-    })
-
-    
-    if(plan){
-        return res.json({
-            dados
-        })
-    }   
-    
-}
-
-const criarPlano = async(req,res)=>{
+const criarPlano = async(req,res) =>{
 
     let plano = {
         nomePlano: req.body.nomePlano,
@@ -40,6 +19,5 @@ const criarPlano = async(req,res)=>{
 }
 
 module.exports = {   
-    plano,
     criarPlano 
 }

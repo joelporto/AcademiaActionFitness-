@@ -53,7 +53,7 @@ const fornecedores = sequelizeAcademia.define('fornecedores', {
     numeroFor:{
         type: Sequelize.INTEGER,
         allowNull: true
-    }
+    },  
 
 })
 

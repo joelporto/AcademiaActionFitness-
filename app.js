@@ -59,6 +59,10 @@ const init = () => {
     let buscarContaRoutes = require('./src/modules/buscarConta/routes/index')
     app.use('/buscarConta' , buscarContaRoutes)
 
+    //Rota para criar planos
+    let criarPlanoRoutes = require('./src/modules/criarPlanos/routes/index')
+    app.use('/criarPlano' , criarPlanoRoutes)
+
     //Rota para alterar dados dos planos
     let alterarPlanoRoutes = require('./src/modules/alterarPlanos/routes/index')
     app.use('/alterarPlano' , alterarPlanoRoutes)

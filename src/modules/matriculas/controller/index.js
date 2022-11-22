@@ -67,8 +67,6 @@ if(validarMatricula){
     res.status(400).send({mensagen: "Erro: matricula já existe"});
     return
 }else{
-  res.status(200).send({mensagen: "criado com sucesso "})
-}
 
     let cliente = {
 
@@ -101,23 +99,169 @@ if(validarMatricula){
     }else{
       valor = 70
     }
-       
+
     let vigencia = req.body.vigencia
     let v1 = req.body.data
     let data = new Date();
-    let dataV1 = ((v1 )) + "/" + ((data.getMonth() + 2)) + "/" + ((data.getFullYear() + 0));
-    let dataV2 = ((v1 )) + "/" + ((data.getMonth() + 3)) + "/" + ((data.getFullYear() + 0));
-    let dataV3 = ((v1 )) + "/" + ((data.getMonth() + 4)) + "/" + ((data.getFullYear() + 0));
-    let dataV4 = ((v1 )) + "/" + ((data.getMonth() + 5)) + "/" + ((data.getFullYear() + 0));
-    let dataV5 = ((v1 )) + "/" + ((data.getMonth() + 6)) + "/" + ((data.getFullYear() + 0));
-    let dataV6 = ((v1 )) + "/" + ((data.getMonth() + 7)) + "/" + ((data.getFullYear() + 0));
-    let dataV7 = ((v1 )) + "/" + ((data.getMonth() + 8)) + "/" + ((data.getFullYear() + 0));
-    let dataV8 = ((v1 )) + "/" + ((data.getMonth() + 9)) + "/" + ((data.getFullYear() + 0));
-    let dataV9 = ((v1 )) + "/" + ((data.getMonth() + 10)) + "/" + ((data.getFullYear() + 0));
-    let dataV10 = ((v1 )) + "/" + ((data.getMonth() + 11)) + "/" + ((data.getFullYear() + 0));
-    let dataV11 = ((v1 )) + "/" + ((data.getMonth() + 12)) + "/" + ((data.getFullYear() + 0));
-    let dataV12 = ((v1 )) + "/" + ((data.getMonth() + 13)) + "/" + ((data.getFullYear() + 0));
-     
+    let dataV1,dataV2,dataV3,dataV4,dataV5,dataV6,dataV7,dataV8,dataV9,dataV10,dataV11,dataV12
+    if(data.getMonth() == 11){
+      dataV1 = ((data.getFullYear())) + "-" + ((data.getMonth() +1)) + "-" + ((v1))
+      dataV2 = ((data.getFullYear() + 1)) + "-" + ((01)) + "-" + ((v1))
+      dataV3 = ((data.getFullYear() + 1)) + "-" + ((02)) + "-" + ((v1))
+      dataV4 = ((data.getFullYear() + 1)) + "-" + ((03)) + "-" + ((v1))
+      dataV5 = ((data.getFullYear() + 1)) + "-" + ((04)) + "-" + ((v1))
+      dataV6 = ((data.getFullYear() + 1)) + "-" + ((05)) + "-" + ((v1))
+      dataV7 = ((data.getFullYear() + 1)) + "-" + ((06)) + "-" + ((v1))
+      dataV8 = ((data.getFullYear() + 1)) + "-" + ((07)) + "-" + ((v1))
+      dataV9 = ((data.getFullYear() + 1)) + "-" + ((08)) + "-" + ((v1))
+      dataV10 = ((data.getFullYear() + 1)) + "-" + ((09)) + "-" + ((v1))
+      dataV11 = ((data.getFullYear() + 1)) + "-" + ((10)) + "-" + ((v1))
+      dataV12 = ((data.getFullYear() + 1)) + "-" + ((11)) + "-" + ((v1))
+    }else if (data.getMonth() == 10){
+      dataV1 = ((data.getFullYear())) + "-" + ((data.getMonth() +1)) + "-" + ((v1))
+      dataV2 = ((data.getFullYear())) + "-" + ((12)) + "-" + ((v1))
+      dataV3 = ((data.getFullYear() + 1)) + "-" + ((01)) + "-" + ((v1))
+      dataV4 = ((data.getFullYear() + 1)) + "-" + ((02)) + "-" + ((v1))
+      dataV5 = ((data.getFullYear() + 1)) + "-" + ((03)) + "-" + ((v1))
+      dataV6 = ((data.getFullYear() + 1)) + "-" + ((04)) + "-" + ((v1))
+      dataV7 = ((data.getFullYear() + 1)) + "-" + ((05)) + "-" + ((v1))
+      dataV8 = ((data.getFullYear() + 1)) + "-" + ((06)) + "-" + ((v1))
+      dataV9 = ((data.getFullYear() + 1)) + "-" + ((07)) + "-" + ((v1))
+      dataV10 = ((data.getFullYear() + 1)) + "-" + ((08)) + "-" + ((v1))
+      dataV11 = ((data.getFullYear() + 1)) + "-" + ((9)) + "-" + ((v1))
+      dataV12 = ((data.getFullYear() + 1)) + "-" + ((10)) + "-" + ((v1))
+    }else if(data.getMonth() == 9){
+      dataV1 = ((data.getFullYear())) + "-" + ((data.getMonth() +1)) + "-" + ((v1))
+      dataV2 = ((data.getFullYear())) + "-" + ((11)) + "-" + ((v1))
+      dataV3 = ((data.getFullYear() )) + "-" + ((12)) + "-" + ((v1))
+      dataV4 = ((data.getFullYear() + 1)) + "-" + ((01)) + "-" + ((v1))
+      dataV5 = ((data.getFullYear() + 1)) + "-" + ((02)) + "-" + ((v1))
+      dataV6 = ((data.getFullYear() + 1)) + "-" + ((03)) + "-" + ((v1))
+      dataV7 = ((data.getFullYear() + 1)) + "-" + ((04)) + "-" + ((v1))
+      dataV8 = ((data.getFullYear() + 1)) + "-" + ((05)) + "-" + ((v1))
+      dataV9 = ((data.getFullYear() + 1)) + "-" + ((06)) + "-" + ((v1))
+      dataV10 = ((data.getFullYear() + 1)) + "-" + ((07)) + "-" + ((v1))
+      dataV11 = ((data.getFullYear() + 1)) + "-" + ((08)) + "-" + ((v1))
+      dataV12 = ((data.getFullYear() + 1)) + "-" + ((09)) + "-" + ((v1))
+    }else if(data.getMonth() == 8){
+      dataV1 = ((data.getFullYear())) + "-" + ((data.getMonth() +1)) + "-" + ((v1))
+      dataV2 = ((data.getFullYear())) + "-" + ((10)) + "-" + ((v1))
+      dataV3 = ((data.getFullYear() )) + "-" + ((11)) + "-" + ((v1))
+      dataV4 = ((data.getFullYear() )) + "-" + ((12)) + "-" + ((v1))
+      dataV5 = ((data.getFullYear() + 1)) + "-" + ((01)) + "-" + ((v1))
+      dataV6 = ((data.getFullYear() + 1)) + "-" + ((02)) + "-" + ((v1))
+      dataV7 = ((data.getFullYear() + 1)) + "-" + ((03)) + "-" + ((v1))
+      dataV8 = ((data.getFullYear() + 1)) + "-" + ((04)) + "-" + ((v1))
+      dataV9 = ((data.getFullYear() + 1)) + "-" + ((05)) + "-" + ((v1))
+      dataV10 = ((data.getFullYear() + 1)) + "-" + ((06)) + "-" + ((v1))
+      dataV11 = ((data.getFullYear() + 1)) + "-" + ((07)) + "-" + ((v1))
+      dataV12 = ((data.getFullYear() + 1)) + "-" + ((08)) + "-" + ((v1))
+    }else if(data.getMonth() == 7){
+      dataV1 = ((data.getFullYear())) + "-" + ((data.getMonth() +1)) + "-" + ((v1))
+      dataV2 = ((data.getFullYear())) + "-" + ((9)) + "-" + ((v1))
+      dataV3 = ((data.getFullYear() )) + "-" + ((10)) + "-" + ((v1))
+      dataV4 = ((data.getFullYear() )) + "-" + ((11)) + "-" + ((v1))
+      dataV5 = ((data.getFullYear() )) + "-" + ((12)) + "-" + ((v1))
+      dataV6 = ((data.getFullYear() + 1)) + "-" + ((01)) + "-" + ((v1))
+      dataV7 = ((data.getFullYear() + 1)) + "-" + ((02)) + "-" + ((v1))
+      dataV8 = ((data.getFullYear() + 1)) + "-" + ((03)) + "-" + ((v1))
+      dataV9 = ((data.getFullYear() + 1)) + "-" + ((04)) + "-" + ((v1))
+      dataV10 = ((data.getFullYear() + 1)) + "-" + ((05)) + "-" + ((v1))
+      dataV11 = ((data.getFullYear() + 1)) + "-" + ((06)) + "-" + ((v1))
+      dataV12 = ((data.getFullYear() + 1)) + "-" + ((07)) + "-" + ((v1))
+    }else if(data.getMonth() == 6){
+      dataV1 = ((data.getFullYear())) + "-" + ((data.getMonth() +1)) + "-" + ((v1))
+      dataV2 = ((data.getFullYear())) + "-" + ((8)) + "-" + ((v1))
+      dataV3 = ((data.getFullYear() )) + "-" + ((9)) + "-" + ((v1))
+      dataV4 = ((data.getFullYear() )) + "-" + ((10)) + "-" + ((v1))
+      dataV5 = ((data.getFullYear() )) + "-" + ((11)) + "-" + ((v1))
+      dataV6 = ((data.getFullYear() )) + "-" + ((12)) + "-" + ((v1))
+      dataV7 = ((data.getFullYear() + 1)) + "-" + ((01)) + "-" + ((v1))
+      dataV8 = ((data.getFullYear() + 1)) + "-" + ((02)) + "-" + ((v1))
+      dataV9 = ((data.getFullYear() + 1)) + "-" + ((03)) + "-" + ((v1))
+      dataV10 = ((data.getFullYear() + 1)) + "-" + ((04)) + "-" + ((v1))
+      dataV11 = ((data.getFullYear() + 1)) + "-" + ((05)) + "-" + ((v1))
+      dataV12 = ((data.getFullYear() + 1)) + "-" + ((06)) + "-" + ((v1))
+    }else if(data.getMonth() == 5){
+      dataV1 = ((data.getFullYear())) + "-" + ((data.getMonth() +1)) + "-" + ((v1))
+      dataV2 = ((data.getFullYear())) + "-" + ((7)) + "-" + ((v1))
+      dataV3 = ((data.getFullYear() )) + "-" + ((8)) + "-" + ((v1))
+      dataV4 = ((data.getFullYear() )) + "-" + ((9)) + "-" + ((v1))
+      dataV5 = ((data.getFullYear() )) + "-" + ((10)) + "-" + ((v1))
+      dataV6 = ((data.getFullYear() )) + "-" + ((11)) + "-" + ((v1))
+      dataV7 = ((data.getFullYear() )) + "-" + ((12)) + "-" + ((v1))
+      dataV8 = ((data.getFullYear() + 1)) + "-" + ((01)) + "-" + ((v1))
+      dataV9 = ((data.getFullYear() + 1)) + "-" + ((02)) + "-" + ((v1))
+      dataV10 = ((data.getFullYear() + 1)) + "-" + ((03)) + "-" + ((v1))
+      dataV11 = ((data.getFullYear() + 1)) + "-" + ((04)) + "-" + ((v1))
+      dataV12 = ((data.getFullYear() + 1)) + "-" + ((05)) + "-" + ((v1))
+    }else if(data.getMonth() == 4){
+      dataV1 = ((data.getFullYear())) + "-" + ((data.getMonth() +1)) + "-" + ((v1))
+      dataV2 = ((data.getFullYear())) + "-" + ((6)) + "-" + ((v1))
+      dataV3 = ((data.getFullYear() )) + "-" + ((7)) + "-" + ((v1))
+      dataV4 = ((data.getFullYear() )) + "-" + ((8)) + "-" + ((v1))
+      dataV5 = ((data.getFullYear() )) + "-" + ((9)) + "-" + ((v1))
+      dataV6 = ((data.getFullYear() )) + "-" + ((10)) + "-" + ((v1))
+      dataV7 = ((data.getFullYear() )) + "-" + ((11)) + "-" + ((v1))
+      dataV8 = ((data.getFullYear() )) + "-" + ((12)) + "-" + ((v1))
+      dataV9 = ((data.getFullYear() + 1)) + "-" + ((01)) + "-" + ((v1))
+      dataV10 = ((data.getFullYear() + 1)) + "-" + ((02)) + "-" + ((v1))
+      dataV11 = ((data.getFullYear() + 1)) + "-" + ((03)) + "-" + ((v1))
+      dataV12 = ((data.getFullYear() + 1)) + "-" + ((04)) + "-" + ((v1))
+    }else if(data.getMonth() == 3){
+      dataV1 = ((data.getFullYear())) + "-" + ((data.getMonth() +1)) + "-" + ((v1))
+      dataV2 = ((data.getFullYear())) + "-" + ((5)) + "-" + ((v1))
+      dataV3 = ((data.getFullYear() )) + "-" + ((6)) + "-" + ((v1))
+      dataV4 = ((data.getFullYear() )) + "-" + ((7)) + "-" + ((v1))
+      dataV5 = ((data.getFullYear() )) + "-" + ((8)) + "-" + ((v1))
+      dataV6 = ((data.getFullYear() )) + "-" + ((9)) + "-" + ((v1))
+      dataV7 = ((data.getFullYear() )) + "-" + ((10)) + "-" + ((v1))
+      dataV8 = ((data.getFullYear() )) + "-" + ((11)) + "-" + ((v1))
+      dataV9 = ((data.getFullYear() )) + "-" + ((12)) + "-" + ((v1))
+      dataV10 = ((data.getFullYear() + 1)) + "-" + ((01)) + "-" + ((v1))
+      dataV11 = ((data.getFullYear() + 1)) + "-" + ((02)) + "-" + ((v1))
+      dataV12 = ((data.getFullYear() + 1)) + "-" + ((03)) + "-" + ((v1))
+    }else if(data.getMonth() == 2){
+      dataV1 = ((data.getFullYear())) + "-" + ((data.getMonth() +1)) + "-" + ((v1))
+      dataV2 = ((data.getFullYear())) + "-" + ((4)) + "-" + ((v1))
+      dataV3 = ((data.getFullYear() )) + "-" + ((5)) + "-" + ((v1))
+      dataV4 = ((data.getFullYear() )) + "-" + ((6)) + "-" + ((v1))
+      dataV5 = ((data.getFullYear() )) + "-" + ((7)) + "-" + ((v1))
+      dataV6 = ((data.getFullYear() )) + "-" + ((8)) + "-" + ((v1))
+      dataV7 = ((data.getFullYear() )) + "-" + ((9)) + "-" + ((v1))
+      dataV8 = ((data.getFullYear() )) + "-" + ((10)) + "-" + ((v1))
+      dataV9 = ((data.getFullYear() )) + "-" + ((11)) + "-" + ((v1))
+      dataV10 = ((data.getFullYear() )) + "-" + ((12)) + "-" + ((v1))
+      dataV11 = ((data.getFullYear() + 1)) + "-" + ((01)) + "-" + ((v1))
+      dataV12 = ((data.getFullYear() + 1)) + "-" + ((02)) + "-" + ((v1))
+    }else if(data.getMonth() == 1){
+      dataV1 = ((data.getFullYear())) + "-" + ((data.getMonth() +1)) + "-" + ((v1))
+      dataV2 = ((data.getFullYear())) + "-" + ((3)) + "-" + ((v1))
+      dataV3 = ((data.getFullYear())) + "-" + ((4)) + "-" + ((v1))
+      dataV4 = ((data.getFullYear())) + "-" + ((5)) + "-" + ((v1))
+      dataV5 = ((data.getFullYear())) + "-" + ((6)) + "-" + ((v1))
+      dataV6 = ((data.getFullYear())) + "-" + ((7)) + "-" + ((v1))
+      dataV7 = ((data.getFullYear())) + "-" + ((8)) + "-" + ((v1))
+      dataV8 = ((data.getFullYear())) + "-" + ((9)) + "-" + ((v1))
+      dataV9 = ((data.getFullYear())) + "-" + ((10)) + "-" + ((v1))
+      dataV10 = ((data.getFullYear())) + "-" + ((11)) + "-" + ((v1))
+      dataV11 = ((data.getFullYear())) + "-" + ((12)) + "-" + ((v1))
+      dataV12 = ((data.getFullYear() + 1 )) + "-" + ((01)) + "-" + ((v1))
+    }else if(data.getMonth() == 0){
+      dataV1 = ((data.getFullYear())) + "-" + ((data.getMonth() +1)) + "-" + ((v1))
+      dataV2 = ((data.getFullYear())) + "-" + ((2)) + "-" + ((v1))
+      dataV3 = ((data.getFullYear() )) + "-" + ((3)) + "-" + ((v1))
+      dataV4 = ((data.getFullYear())) + "-" + ((4)) + "-" + ((v1))
+      dataV5 = ((data.getFullYear())) + "-" + ((5)) + "-" + ((v1))
+      dataV6 = ((data.getFullYear())) + "-" + ((6)) + "-" + ((v1))
+      dataV7 = ((data.getFullYear())) + "-" + ((7)) + "-" + ((v1))
+      dataV8 = ((data.getFullYear())) + "-" + ((8)) + "-" + ((v1))
+      dataV9 = ((data.getFullYear())) + "-" + ((9)) + "-" + ((v1))
+      dataV10 = ((data.getFullYear())) + "-" + ((10)) + "-" + ((v1))
+      dataV11 = ((data.getFullYear())) + "-" + ((11)) + "-" + ((v1))
+      dataV12 = ((data.getFullYear())) + "-" + ((12)) + "-" + ((v1))
+    } 
+      
     let dataPago = ((data.getFullYear())) + "-" + ((data.getMonth() + 1)) + "-" + ((data.getDate()))
    
     if(vigencia == 'Mensal'){
@@ -135,8 +279,12 @@ if(validarMatricula){
       await service.criarContasnoBD(contas)
     }else if(vigencia == 'Trimestral'){
 
+      let valorTotal = valor * 3
+      let valorDesconto = valorTotal * 0.15
+      let valorResultado = valorTotal - valorDesconto
+
       let contas = {
-        valor: valor * 3 ,
+        valor: valorResultado / 3,
         nomeConta: req.body.nome,
         vigencia: req.body.vigencia,
         cpfConta: req.body.cpf, 
@@ -149,9 +297,13 @@ if(validarMatricula){
       }
       await service.criarContasnoBD(contas)
     }else if(vigencia == 'Semestral'){
+
+      let valorTotal = valor * 6
+      let valorDesconto = valorTotal * 0.20
+      let valorResultado = valorTotal - valorDesconto
       
       let contas ={
-        valor: valor * 6,
+        valor: valorResultado / 6,
         nomeConta: req.body.nome,
         vigencia: req.body.vigencia,
         cpfConta: req.body.cpf, 
@@ -166,10 +318,14 @@ if(validarMatricula){
         dataV6: dataV6,
       }
       await service.criarContasnoBD(contas)
-    }else{
+    }else if(vigencia == 'Anual'){
+
+      let valorTotal = valor * 12
+      let valorDesconto = valorTotal * 0.30
+      let valorResultado = valorTotal - valorDesconto
 
       let contas = {
-        valor: valor * 12,
+        valor: valorResultado / 12,
         nomeConta: req.body.nome,
         vigencia: req.body.vigencia,
         cpfConta: req.body.cpf, 
@@ -190,10 +346,15 @@ if(validarMatricula){
         dataV12: dataV12,
       }
       await service.criarContasnoBD(contas)
+    }else{
+      return res.send({menssagem: "erro interno"})
     }
  
     await service.criarclienteNoBD(cliente)
+    res.send({menssagem: "Criado com Sucesso"})
+
     
+}
 }
 
 module.exports = {

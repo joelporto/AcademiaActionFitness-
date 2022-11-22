@@ -5,7 +5,7 @@ const alterarplanos = async(_alterar , _key) =>{
 
     let pesquisa = await planoModel.findOne({
         where: {
-            nomePlano: _key
+            id: _key
         },
         logging: true,
         raw: true
@@ -15,7 +15,7 @@ const alterarplanos = async(_alterar , _key) =>{
 
     let result = await planoModel.update(_alterar, {
         where: {
-            nomePlano: _key
+            id: _key
         },
         logging: true
     }).catch((err) =>{
