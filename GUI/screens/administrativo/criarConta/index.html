@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrativo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="containerButtonShow">
+        <img id="showButton" class="buttonShow" src="../../../assets/showIcon.jfif"></button>
+        <div class="containerUser" id="imageLogin">
+            <label id="user"></label>
+            <img src="../../../assets/iconUser.png">
+        </div>
+        <div class="logof">
+            <a href="../../../index.html">Sair</a>
+        </div>
+    </div>
+    <section class="containerPrincipal"> 
+        <div class="containerStart">
+            <div class="options">
+                <img src="../../../assets/icon-registration.png" class="iconOptions"/>
+                <a href="../registration/matricula/index.html" for="client">Matricula</a>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-sell.png" class="iconOptions"/>
+                <a href="../plans/index.html" for="client">Planos</a>
+            </div>
+            <div class="options" onclick="mensagemErro()">
+                <img src="../../../assets/icon-financial.png" class="iconOptions"/>
+                <a href="../financeiro/contasReceber/index.html" for="client">Financeiro</a>
+            </div>
+            <div>
+                <div class="optionsAdm" style="background: rgb(250,217,97); background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);">
+                    <img src="../../../assets/icon-administration.png" class="iconOptions" />
+                    <a href="" for="client" >Administrativo</a>
+                    <div id="register">
+                        <img src="../../../assets/icon_show.png" class="iconShow" />
+                    </div>
+                </div>
+                <div class="user">
+                    <div>
+                        <a href="../indicações/index.html">Registro de Indicações</a><br>
+                        <a href="../aulas/index.html">Cronograma de aulas e atividades</a>
+                    </div>
+                </div>
+            </div>
+            <div class="options" onclick="mensagemErro()">
+                <img src="../../../assets/icon-training.png" class="iconOptions"/>
+                <a href="../treinos/avaliacao_fisica/index.html">Treinos</a>
+            </div>
+        </div>
+        <div class="containerRegistro">
+            <form class="formRegister">
+                <div>
+                    <div class="logo">
+                        <img src="../../../assets/logo_projeto.jpg">
+                    </div>
+                    <div class="inputs">
+                        <h1>Criar conta</h1>
+                        <h3>Preencha os dados</h3>
+                        <label>Nome</label>
+                        <input type="text" id="nomeColaborador"/>
+                        <label>Usuário</label>
+                        <input type="text"  id="userColaborador"/>
+                        <label>Senha</label>
+                        <input type="password" id="senhaColaborador"/>
+                        <div class="containerButton">
+                            <button id="registrar" type="button">Registrar</button>
+                        </div>
+                        <div class="lds-dual-ring"></div>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                
+            </form>
+            
+        </div>
+    </section>    
+</body>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</html>

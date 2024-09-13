@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação Fisica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../../assets/favicon.ico" type="image/x-icon">
+    
+</head>
+<body>
+    <div class="containerButton">
+        <img id="showButton" class="buttonShow" src="../../../assets/showIcon.jfif">
+        <div class="containerUser">
+            <label id="user"></label>
+            <img src="../../../assets/iconUser.png" id="imageLogin">
+        </div>
+        <div class="logof">
+            <a href="../../../index.html">Sair</a>
+        </div>
+    </div>
+    <section class="containerPrincipal">
+        <div class="containerStart">
+            <div class="options"  >
+                <img src="../../../assets/icon-registration.png" class="iconOptions"/>
+                <a href="../../registration/matricula/index.html" for="client">Matricula</a>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-sell.png" class="iconOptions"/>
+                <a href="../../plans/index.html" for="client">Planos</a>
+            </div>
+            <div>
+                <div class="options" >
+                    <img src="../../../assets/icon-financial.png" class="iconOptions"/>
+                    <a href="../../financeiro/contasReceber/index.html">Financeiro</a>
+                    <img src="../../../assets/icon_show.png" class="iconShow" id="showOptions"/>
+                </div>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-administration.png" class="iconOptions"/>
+                <a href="../../administrativo/criarConta/index.html" for="client">Administrativo</a>
+            </div>
+            <div class="options" style="background: rgb(250,217,97); background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);">
+                <img src="../../../assets/icon-training.png" class="iconOptions"/>
+                <a href="">Treinos</a>
+            </div>
+        </div>
+        <section class="containerTreinos">
+            <form class="form">
+                <div class="informacoesIniciais">
+                    <h1>Identificação do Aluno</h1>
+                    <div>
+                        <input type="text" placeholder="CPF" onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="cpf" maxlength="14">
+                        <input type="text" placeholder="Idade" id="idade">
+                    </div>   
+                </div>
+                <div class="anamneseDoAluno">
+                    <h1>Anamnese do Aluno</h1>
+                    <div>
+                        <label class="principal">Pratica alguma atividade física?</label>
+                        <label>Sim</label>
+                        <input type="checkbox" id="sim">
+                        <label>Não</label>
+                        <input type="checkbox" id="nao">
+                    </div>
+                    <div>
+                        <label class="principal">Qual atividade?</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label class="principal">Quantas vezes na semana?</label>
+                        <label>1x</label>
+                        <input type="checkbox">
+                        <label>2x</label>
+                        <input type="checkbox">
+                        <label>3x ou mais</label>
+                        <input type="checkbox">
+                    </div>
+                    <div>
+                        <label class="principal">Fumante?</label>
+                        <label>Sim</label>
+                        <input type="checkbox">
+                        <label>Não</label>
+                        <input type="checkbox">
+                    </div>
+                    <div>
+                        <label class="principal">Problemas na coluna?</label>
+                        <label>Sim</label>
+                        <input type="checkbox">
+                        <label>Não</label>
+                        <input type="checkbox">
+                    </div>
+                    <div>
+                        <label class="principal">Tratamento Ósseo</label>
+                        <label>Sim</label>
+                        <input type="checkbox">
+                        <label>Não</label>
+                        <input type="checkbox">
+                    </div>
+    
+                </div>
+                <div class="composicaoCorporal">
+                    <h1>Composição Corporal</h1>
+                    <div>
+                        <label>Peso(kg)</label>
+                        <input type="text" id="peso" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    </div>
+                    <div>
+                        <label>Altura(cm)</label>
+                        <input type="text" id="altura" maxlength="4">
+                    </div>
+                    <div>
+                        <label>Percentual de gordura</label>
+                        <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    </div>
+                    <div>
+                        <label>Circurferência Abdominal:</label>
+                        <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    </div>
+                    <div>
+                        <label>IMC: </label>
+                        <input type="text" disabled id="imc">
+                    </div>
+                    <div class="buttonEnviar">
+                        <button type="button" id="enviarDados">Enviar dados</button>
+                    </div>
+                </div>
+                
+            </form>
+        </section>
+    <section>
+    
+</body>
+<script src="./index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</html>

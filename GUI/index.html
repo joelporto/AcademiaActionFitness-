@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Fitness</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        function preventBack() {
+            window.history.forward(); 
+        }
+          
+        setTimeout("preventBack()", 0);
+          
+        window.onunload = function() { null };
+    </script>
+</head>
+<body>
+    <div class="aprendizado">
+        <label>Como utilizar nosso sistema?</label><br>
+        <a href="">Clique aqui e aprenda!</a>
+    </div>
+    <div class="content">
+        <div class="contentLogin">
+            <form class="credential">
+                <div class="logo">
+                    <img src="/assets/logo_projeto.jpg"/>
+                </div>
+                <div class="containerInputs" id="containerInputs">
+                    <div class="inputEmail">
+                        <img src="./assets//icon-email.png" class="iconsField">
+                        <input  placeholder="Login" id="login" required/>
+                    </div>
+                    <div class="inputSenha">
+                        <img src="  ./assets//icon-password.jpg" class="iconsField">
+                        <input  placeholder="Senha" type="password" id="senha" required/>
+                    </div>
+                </div>
+                <div class="containerButtons">
+                    <a id="validar">Login</a>
+                </div>
+                <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+            </form>
+            
+        </div>
+       
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matricula</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../../../assets/favicon.ico" type="image/x-icon">
+</head>
+<body> 
+    <div class="containerButtonShow">
+        <img id="showButton" class="buttonShow" src="../../../assets/showIcon.jfif"></button>
+        <div class="containerUser" id="imageLogin">
+            <label id="user"></label>
+            <img src="../../../assets/iconUser.png">
+        </div>
+        <div class="logof">
+            <a href="../../../index.html">Sair</a>
+        </div>
+    </div>
+    <section class="containerPrincipal">
+        <div class="containerStart">
+            <div class="containerMatricula">
+                <div class="optionsMatricula" style="background: rgb(250,217,97); background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);" >
+                    <img src="../../../assets/icon-registration.png" class="iconOptions"/>
+                    <div for="client" class="registerStyle"  >Matricula</div> 
+                    <div id="register" class="containerIcon">
+                        <img src="../../../assets/icon_show.png" class="iconShow" />
+                    </div>
+                </div>
+                <div class="optionsRegister">
+                    <div>
+                        <a href="../localizar_aluno/index.html">Localizar/Aluno</a>
+                    </div>
+                </div>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-sell.png" class="iconOptions"/>
+                <a href="../../plans/index.html" for="client">Planos</a>
+            </div>
+            <div class="options" onclick="mensagemErro()">
+                <img src="../../../assets/icon-financial.png" class="iconOptions"/>
+                <a href="../../financeiro/contasReceber/index.html" >Financeiro</a>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-administration.png" class="iconOptions"/>
+                <a href="../../administrativo/criarConta/index.html" for="client">Administrativo</a>
+            </div>
+            <div class="options" onclick="mensagemErro()">
+                <img src="../../../assets/icon-training.png" class="iconOptions"/>
+                <a href="../../treinos/avaliacao_fisica/index.html">Treinos</a>
+            </div>
+            
+        </div>
+        <div class="registration">
+            <h1>Matricula</h1>
+            <form action="" class="formRegister" id="formRegister">
+                
+                <div class="dadosPessoais">
+                    <span id="select" class="selectPlano"></span>
+                    <h1>Dados Pessoais</h1>
+                    <label>Nome</label>
+                    <input type="text" class="input" placeholder="Digite seu nome" id="nome_completo"/>
+                    <label>CPF</label>
+                    <input type="text" class="input" placeholder="Digite seu CPF" id="cpf" maxlength="14" onkeypress="return event.charCode >= 48 && event.charCode <= 57" autocomplete="off"/>
+                    <label>Telefone</label>
+                    <input type="text" class="input" placeholder="Digite seu Telefone" id="telefone" maxlength="15" />
+                    <label>E-mail</label>
+                    <input type="text" class="input" placeholder="Digite seu E-mail" id="e-mail"/>
+                    <label>Gênero</label>
+                    <select id="genero">
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                    </select>
+                    <label>CEP</label>
+                    <input type="text" class="input" placeholder="Digite seu CEP" id="cep" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
+                    <label>Endereço</label>
+                    <input type="text" class="input" placeholder="Digite seu Endereço" id="endereco"/>
+                    <label>Número</label>
+                    <input type="text" class="input" placeholder="Número" id="numero" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
+                    <label>Bairro</label>
+                    <input type="text" class="input" placeholder="Digite seu Bairro" id="bairro"/>
+                    <label>Data de Nascimento</label>
+                    <input type="date" id="nasc">
+                </div>
+                <div class="dadosPlano">
+                    <h1>Informações do Plano</h1>
+                    <label>Escolha o Plano</label>
+                    <select id="tipoPlano" disabled>
+                        <option>Plano Completo</option>
+                        <option>Plano Familiar-Basico</option>
+                        <option>Plano Familiar-Completo</option>
+                        <option>Plano Especializado</option>
+                        <option>Plano Basico</option>
+                    </select>
+                    <label>Vigência da Assinatura</label>
+                    <select id="vigencia">
+                        <option>Mensal</option>
+                        <option>Trimestral - 15%</option>
+                        <option>Semestral - 20%</option>
+                        <option>Anual - 30%</option>
+                        <option>Desconto por parceria</option>
+                    </select>
+                    <label>Data de vencimento mensal</label>
+                    <select id="vencimento">
+                        <option>05</option>
+                        <option>10</option>
+                        <option>15</option>
+                        <option>20</option>
+                    </select>
+                    <div class="buttons">
+                        <button type="button" id="btn">Finalizar Cadastro</button>
+                        <button type="button" id="btnprint" onclick="imprimirDados()">Imprimir</button>
+                    </div>
+                </div>
+                
+            </form>
+            
+        </div>
+        
+    </section>
+    <div class="dados" id="dados">
+        
+    </div>
+    
+</body>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</html>

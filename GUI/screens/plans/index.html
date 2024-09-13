@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html lang = 'pt-br'>
+    <head>
+        <meta charset = 'UTF-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+        <title>Planos</title>
+    </head>
+    <body>
+        <div class="containerButtonShow">
+            <img id="showButton" class="buttonShow" src="../../assets/showIcon.jfif"></button>
+            <div class="containerUser" id="imageLogin">
+                <label id="user"></label>
+                <img src="../../../assets/iconUser.png" >
+            </div>    
+            <div class="logof">
+                <a href="../../../index.html">Sair</a>
+            </div>
+        </div>
+        <section class="containerPrincipal">
+            <div class="containerStart">
+                <div class="options">
+                    <img src="../../assets/icon-registration.png" class="iconOptions"/>
+                    <a href="../registration/matricula/index.html" for="client">Matricula</a>
+                </div>
+                <div class="options" style="background: rgb(250,217,97); background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);">
+                    <img src="../../assets/icon-sell.png" class="iconOptions"/>
+                    <a href="./index.html" for="client">Planos</a>
+                </div>
+                <div class="options">
+                    <img src="../../assets/icon-financial.png" class="iconOptions"/>
+                    <a href="../financeiro/contasReceber/index.html" >Financeiro</a>
+                </div>
+                <div class="options" >
+                    <img src="../../assets/icon-administration.png" class="iconOptions"/>
+                    <a href="../administrativo/criarConta/index.html" for="client">Administrativo</a>
+                </div>
+                <div class="options" >
+                    <img src="../../assets/icon-training.png" class="iconOptions"/>
+                    <a href="../treinos/avaliacao_fisica/index.html" >Treinos</a>
+                </div>
+            </div> 
+            <div class="containerForm">
+                <div class="formPlans">
+                    <div class="containerPlano" >
+                        <div class="valor">
+                            <h1 id="plano">Plano Basico</h1>
+                            <h3>
+                                R$ 70,00
+                            </h3>
+                            <p>por mês</p>
+                            <hr>
+                            <div class="beneficios">
+                                <ul>
+                                    <li>Área de musculação e aeróbicos</li>
+                                    <li>Teste Físico</li>
+                                    <li>Professor</li>
+                                    <li>Resultados</li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        
+                        <div class="obterPlano">
+                            <button data-plano="Plano Basico" class="botao">Obter Plano</button>
+                        </div>
+                    </div>
+                    <div class="containerPlano" >
+                        <div class="valor">
+                            <h1 id="planoCompleto">Plano Completo</h1>
+                            <h3>
+                                R$ 99,90
+                            </h3>
+                            <p>por mês</p>
+                            <hr>
+                            <div class="beneficios">
+                                <ul>
+                                    <li>Área de musculação e aeróbicos</li>
+                                    <li>Teste Físico</li>
+                                    <li>Professor</li>
+                                    <li>Resultados</li>
+                                    <li>Aulas Coletivas</li>
+                                    <li>Leve amigos para treinar com você</li>
+                                    <li>Acesso às aulas de ginástica, danças e artes marciais</li>
+                                    <li>Fisioterapeuta disponível para dúvidas em gerais </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="obterPlano">
+                            <button id="selectPlano" data-plano="Plano Completo" class="botao">Obter Plano</button>
+                        </div>
+                    </div>
+                    <div class="containerPlano" >
+                        <div class="planoFamiliar_basico">
+                            <h1 id="planoFamiliarBasico">Plano Familiar-Basico</h1>
+                            <h3>
+                                R$ 63,90
+                            </h3>
+                            <p>por mês</p>
+                            <span>Mesmos benefícios do plano básico, com 10% de desconto por familiar.</span>
+                            <hr>
+                            <div class="obterPlano">
+                                <button id="selectPlano" data-plano="Plano Familiar-Basico" class="botao">Obter Plano</button>
+                            </div>
+                        </div>
+                        <div class="planoFamiliar_completo" >
+                            <h1 id="planoFamiliarCompleto">Plano Familiar-Completo</h1>
+                            <h3>
+                                R$ 89,90
+                            </h3>
+                            <p>por mês</p>
+                            <span>Mesmos benefícios do plano completo, com 10% de desconto por familiar</span>
+                            <div class="obterPlano">
+                                <button id="selectPlano" data-plano="Plano Familiar-Completo" class="botao">Obter Plano</button>
+                            </div>
+                        </div>     
+                    </div>
+                    <div class="containerPlano" data-plano="Plano Especializado">
+                        <h1>Plano Especializado</h1>
+                        <h3> R$ 120</h3>
+                        <div>
+                            <ul>
+                                <li>Área de musculação e aeróbicos</li>
+                                <li>Teste Físico e de performance</li>
+                                <li>Treinamento especialziado</li>
+                                <li>Resultados</li>
+                                <li>Personal trainer</li>
+                            </ul>
+                        </div>
+                        <div class="obterPlano">
+                            <button id="selectPlano" data-plano="Plano Especializado" class="botao">Obter Plano</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</html>

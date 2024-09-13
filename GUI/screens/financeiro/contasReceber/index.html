@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas á Receber</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../../../assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="containerButtonShow">
+        <img id="showButton" class="buttonShow" src="../../../assets/showIcon.jfif"></button>
+        <div class="containerUser" id="imageLogin">
+            <label id="user"></label>
+            <img src="../../../assets/iconUser.png">
+        </div>
+        <div class="logof">
+            <a href="../../../index.html">Sair</a>
+        </div>
+    </div>
+    <section class="containerPrincipal"> 
+        <div class="containerStart">
+            <div class="options">
+                <img src="../../../assets/icon-registration.png" class="iconOptions"/>
+                <a href="../../registration/matricula/index.html" for="client">Matricula</a>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-sell.png" class="iconOptions"/>
+                <a href="../../plans/index.html" for="client">Planos</a>
+            </div>
+            <div>
+                <div class="options" onclick="mensagemErro()" style="background: rgb(250,217,97); background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);">
+                    <img src="../../../assets/icon-financial.png" class="iconOptions"/>
+                    <label >Financeiro</label>
+                    <img src="../../../assets/icon_show.png" class="iconShow" id="showOptions"/>
+                    
+                </div>
+                <div class="containerOptions"> 
+                    <div><a href="../cancelamento/index.html">Cancelamento</a><br></div>
+                    <div><a href="../fornecedores/index.html">Fornecedores</a></div>
+                </div>
+            </div>
+            
+            <div class="options">
+                <img src="../../../assets/icon-administration.png" class="iconOptions"/>
+                <a href="../../administrativo/criarConta/index.html" for="client">Administrativo</a>
+            </div>
+            <div class="options" onclick="mensagemErro()">
+                <img src="../../../assets/icon-training.png" class="iconOptions"/>
+                <a href="../../treinos/avaliacao_fisica/index.html">Treinos</a>
+            </div>
+        </div>
+        <h1>Contas á Receber</h1>
+        <div class="containerBusca" id="containerBusca">
+            <div>
+                <input placeholder="Digite o CPF do aluno" maxlength="14" id="cpf" class="pesquisar" onkeypress="return event.charCode >= 48 && event.charCode <= 57" autocomplete="off">
+                <button type="button" class="button" id="pesquisar">
+                    <span class="button__text">Localizar Aluno</span>
+                </button>
+            </div>
+        </div>
+        <div class="containerInputs">
+            <input type="text" placeholder="Aluno" disabled="" id="Aluno">
+            <input type="text" placeholder="Plano" disabled="" id="Plano">
+            <input type="text" placeholder="Status" disabled="" id="Status">
+        </div>
+        <table class="tabela" id="historico">
+            <tr>
+                <th>Histórico de conta</th>
+                <th>Valor a pagar</th>
+                <th>Data de vencimento</th>
+                <th>Data de pagamento</th>
+                <th>Recibo</th>
+                <th>Pago</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+        
+    </section>
+</body>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</html>

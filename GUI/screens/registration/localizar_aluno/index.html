@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localizar Aluno</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../../../assets/favicon.ico" type="image/x-icon">
+</head>
+<body> 
+    <div class="containerButton">
+        <img id="showButton" class="buttonShow" src="../../../assets/showIcon.jfif">
+        <div class="containerUser">
+            <label id="user"></label>
+            <img src="../../../assets/iconUser.png" id="imageLogin">
+        </div>
+        <div class="logof">
+            <a href="../../../index.html">Sair</a>
+        </div>
+    </div>
+    
+    <section class="containerPrincipal">
+        <div class="containerStart">
+            <div class="options" style="background: rgb(250,217,97); background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);" >
+                <img src="../../../assets/icon-registration.png" class="iconOptions"/>
+                <a href="../../registration/matricula/index.html" for="client">Matricula</a>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-sell.png" class="iconOptions"/>
+                <a href="../../plans/index.html" for="client">Planos</a>
+            </div>
+            <div class="options" onclick="mensagemErro()">
+                <img src="../../../assets/icon-financial.png" class="iconOptions"/>
+                <a href="../../financeiro/contasReceber/index.html">Financeiro</a>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-administration.png" class="iconOptions"/>
+                <a href="../../administrativo/criarConta/index.html" for="client">Administrativo</a>
+            </div>
+            <div class="options" onclick="mensagemErro()">
+                <img src="../../../assets/icon-training.png" class="iconOptions"/>
+                <a href="../../treinos/avaliacao_fisica/index.html">Treinos</a>
+            </div>
+        </div>
+        <div class="containerBusca" id="containerBusca">
+            <div >
+                <input placeholder="Digite o CPF do aluno" maxlength="14" id="cpf"onkeypress="return event.charCode >= 48 && event.charCode <= 57"  autocomplete="off">
+                <button type="button" class="button" id="pesquisar">
+                    <span class="button__text">Pesquisar</span>
+                </button>
+                <button id="enviarDados" class="butaoEnviar" disabled >Enviar dados</button>
+            </div>
+            <div id="matricula" class="aluno">
+        </div>
+    </section>
+    <section class="informacoesdeMatricula">
+        <form class="formDados" id="form">
+            <div class="matricula">
+                <h1>Dados de Matrícula do Aluno</h1>
+                <div class="edit">
+                    <input type="text" id="nomeAluno" placeholder="Nome" disabled/>
+                    <button id="editarCampo" data-button="nomeAluno">Editar</button>
+                </div>
+                <div class="edit">
+                    <input type="text" id="cadastroCPF" placeholder="CPF" disabled/>
+                    <button id="editarCampo" data-button="cadastroCPF">Editar</button>
+                </div>
+                <div class="edit">
+                    <input type="text" id="genero" placeholder="Genero" disabled/>
+                    <button id="editarCampo" data-button="genero">Editar</button>
+                </div>
+                <div class="edit">
+                    <input type="text" id="telefone" placeholder="Telefone" disabled/>
+                    <button id="editarCampo" data-button="telefone">Editar</button>
+                </div>
+                <div class="edit">
+                    <input type="text" id="nascimento" placeholder="Nascimento" disabled/>
+                    <button id="editarCampo" data-button="nascimento">Editar</button>
+                </div>
+                <div class="edit">
+                    <input type="text" id="email" placeholder="Email" disabled/>
+                    <button id="editarCampo" data-button="email">Editar</button>
+                </div>
+            </div>
+            <div class="planos">
+                <h1>Dados do plano</h1>
+                <div class="edit">
+                    <input type="text" id="plano" placeholder="Plano" disabled/>
+                    <button id="editarCampo" data-button="plano">Editar</button>
+                </div>
+                <div class="edit">
+                    <input type="text" id="vigencia" placeholder="Vigência" disabled/>
+                    <button id="editarCampo"data-button="vigencia">Editar</button>
+                </div>
+                <div class="edit">
+                    <input type="text" id="vencimento" placeholder="Vencimento do plano" disabled/>
+                    <button id="editarCampo" data-button="vencimento">Editar</button>
+                </div>
+            </div>
+            <div class="endereco">
+                <h1>Endereço</h1>
+                <div class="edit">
+                    <input type="text" id="rua" placeholder="Rua" disabled/>
+                    <button id="editarCampo" data-button="rua">Editar</button>
+                </div>
+                <div class="edit">
+                    <input type="text" id="numero" placeholder="Número" disabled/>
+                    <button id="editarCampo"data-button="numero">Editar</button>
+                </div>
+                <div class="edit">
+                    <input type="text" id="bairro" placeholder="Bairro" disabled/>
+                    <button id="editarCampo"data-button="bairro">Editar</button>
+                </div>
+                <div class="edit">
+                    <input type="text" id="cep" placeholder="CEP" disabled/>
+                    <button id="editarCampo" data-button="cep">Editar</button>
+                </div>
+                
+            </div>
+        </form>
+        
+    </section>
+    
+    
+</body>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</html>
